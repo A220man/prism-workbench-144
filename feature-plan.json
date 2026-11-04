@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "current_feature": "feature-001",
+  "features": [
+    {
+      "id": "feature-001",
+      "title": "Project Setup & Basic Dashboard",
+      "status": "in_progress",
+      "acceptance": [
+        "Monorepo structure with server (Express + Prisma) and UI (React + Vite)",
+        "TypeScript configuration for both packages",
+        "Prisma schema with Agent and Task models",
+        "Express server with REST API endpoints for agents and tasks",
+        "React dashboard displaying agents and tasks",
+        "Database migration and seed script",
+        "Dev script running both server and UI concurrently",
+        "Basic tests passing"
+      ],
+      "implementation": [
+        "package.json",
+        "tsconfig.json",
+        "server/package.json",
+        "server/tsconfig.json",
+        "server/src/index.ts",
+        "ui/package.json",
+        "ui/tsconfig.json",
+        "ui/tsconfig.node.json",
+        "ui/vite.config.ts",
+        "ui/index.html",
+        "ui/src/main.tsx",
+        "ui/src/App.tsx",
+        "prisma/schema.prisma",
+        ".env"
+      ],
+      "tests": []
+    },
+    {
+      "id": "feature-002",
+      "title": "Authentication & Multi-org Support",
+      "status": "planned",
+      "acceptance": [
+        "User authentication with JWT",
+        "Organization model and multi-org data isolation",
+        "Role-based access control (RBAC)",
+        "Login/logout UI"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "feature-003",
+      "title": "Agent Heartbeat & Real-time Updates",
+      "status": "planned",
+      "acceptance": [
+        "WebSocket connection for real-time agent status",
+        "Agent heartbeat endpoint",
+        "Live dashboard updates without refresh"
+      ],
+      "implementation": [],
+      "tests": []
+    }
+  ]
+}
