@@ -10,7 +10,7 @@ feature-001
 
 ### feature-001 — Project Setup & Basic Dashboard
 
-Status: in_progress
+Status: done
 
 Acceptance:
 - Monorepo structure with server (Express + Prisma) and UI (React + Vite)
@@ -22,7 +22,7 @@ Acceptance:
 - Dev script running both server and UI concurrently
 - Basic tests passing
 
-Implementation: `package.json`, `tsconfig.json`, `server/package.json`, `server/tsconfig.json`, `server/src/index.ts`, `ui/package.json`, `ui/tsconfig.json`, `ui/tsconfig.node.json`, `ui/vite.config.ts`, `ui/index.html`, `ui/src/main.tsx`, `ui/src/App.tsx`, `prisma/schema.prisma`, `.env`
+Implementation: `package.json`, `tsconfig.json`, `server/package.json`, `server/tsconfig.json`, `server/src/index.ts`, `ui/package.json`, `ui/tsconfig.json`, `ui/tsconfig.node.json`, `ui/vite.config.ts`, `ui/index.html`, `ui/src/main.tsx`, `ui/src/App.tsx`, `prisma/schema.prisma`, `.env`, `pnpm-workspace.yaml`
 
 ### feature-002 — Authentication & Multi-org Support
 
