@@ -5,7 +5,7 @@
     {
       "id": "feature-001",
       "title": "Project Setup & Basic Dashboard",
-      "status": "in_progress",
+      "status": "done",
       "acceptance": [
         "Monorepo structure with server (Express + Prisma) and UI (React + Vite)",
         "TypeScript configuration for both packages",
@@ -30,7 +30,8 @@
         "ui/src/main.tsx",
         "ui/src/App.tsx",
         "prisma/schema.prisma",
-        ".env"
+        ".env",
+        "pnpm-workspace.yaml"
       ],
       "tests": []
     },

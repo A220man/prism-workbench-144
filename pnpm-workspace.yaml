@@ -1,0 +1,7 @@
+packages:
+  - server
+  - ui
+
+hoistPattern:
+  - "@prisma/client"
+  - "@prisma/client/**"

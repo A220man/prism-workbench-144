@@ -6,10 +6,10 @@
     "dev": "concurrently \"pnpm dev:server\" \"pnpm dev:ui\"",
     "dev:server": "tsx watch server/src/index.ts",
     "dev:ui": "vite --config ui/vite.config.ts",
-    "build": "tsc && vite build --config ui/vite.config.ts",
+    "build": "pnpm --filter @prism-workbench/server build && pnpm --filter @prism-workbench/ui build",
     "test": "vitest run",
     "test:watch": "vitest",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "pnpm --filter @prism-workbench/server typecheck && pnpm --filter @prism-workbench/ui typecheck",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:studio": "prisma studio"
