@@ -26,7 +26,7 @@ Implementation: `package.json`, `tsconfig.json`, `server/package.json`, `server/
 
 ### feature-002 — Authentication & Multi-org Support
 
-Status: planned
+Status: in_progress
 
 Acceptance:
 - User authentication with JWT
