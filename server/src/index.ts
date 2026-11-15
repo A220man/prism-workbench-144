@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import { PrismaClient } from '@prisma/client';
+import jwt from 'jsonwebtoken';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -8,6 +9,7 @@ const prisma = new PrismaClient();
 
 app.use(cors());
 app.use(express.json());
+// AUTH_PLACEHOLDER
 
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
