@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.4.0 — work-in-progress checkpoint
+
+Partial code published for continued development. Known issues: STATUS.md.
+
+## 1.3.1 — JWT Authentication checkpoint
+
+### Added
+- User authentication with JWT: POST /api/login endpoint that issues JSON Web Tokens
+- JWT authentication middleware: authenticateToken validates tokens and attaches user to request
+- Protected API routes: GET/POST /api/agents and GET/POST /api/tasks require valid JWT
+- Organization/organizationId fields added to Agent and Task models for multi-org data isolation
+
 ## 1.3.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.
