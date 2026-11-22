@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_feature": "feature-001",
+  "current_feature": "feature-002",
   "features": [
     {
       "id": "feature-001",
@@ -45,8 +45,15 @@
         "Role-based access control (RBAC)",
         "Login/logout UI"
       ],
-      "implementation": [],
-      "tests": []
+      "implementation": [
+        "server/src/index.ts - JWT auth middleware, login endpoint, protected routes",
+        "prisma/schema.prisma - organization fields added to Agent and Task models"
+      ],
+      "tests": [
+        "Manual test: POST /api/login with valid credentials returns JWT token",
+        "Manual test: Protected routes require valid JWT token",
+        "Manual test: Invalid/missing token returns 401/403"
+      ]
     },
     {
       "id": "feature-003",

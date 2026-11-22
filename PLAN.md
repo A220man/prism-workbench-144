@@ -4,7 +4,7 @@ Each round completes one feature or repair. Future items are planned, not implem
 
 ## Current round
 
-feature-001
+feature-002
 
 ## Roadmap
 
@@ -33,6 +33,10 @@ Acceptance:
 - Organization model and multi-org data isolation
 - Role-based access control (RBAC)
 - Login/logout UI
+
+Implementation: `server/src/index.ts - JWT auth middleware, login endpoint, protected routes`, `prisma/schema.prisma - organization fields added to Agent and Task models`
+
+Tests: `Manual test: POST /api/login with valid credentials returns JWT token`, `Manual test: Protected routes require valid JWT token`, `Manual test: Invalid/missing token returns 401/403`
 
 ### feature-003 — Agent Heartbeat & Real-time Updates
 
