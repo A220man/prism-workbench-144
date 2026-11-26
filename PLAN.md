@@ -26,7 +26,7 @@ Implementation: `package.json`, `tsconfig.json`, `server/package.json`, `server/
 
 ### feature-002 — Authentication & Multi-org Support
 
-Status: in_progress
+Status: done
 
 Acceptance:
 - User authentication with JWT
@@ -34,9 +34,9 @@ Acceptance:
 - Role-based access control (RBAC)
 - Login/logout UI
 
-Implementation: `server/src/index.ts - JWT auth middleware, login endpoint, protected routes`, `prisma/schema.prisma - organization fields added to Agent and Task models`
+Implementation: `server/src/index.ts - JWT auth middleware, login endpoint, protected routes, RBAC authorization middleware`, `prisma/schema.prisma - organization fields added to Agent and Task models`
 
-Tests: `Manual test: POST /api/login with valid credentials returns JWT token`, `Manual test: Protected routes require valid JWT token`, `Manual test: Invalid/missing token returns 401/403`
+Tests: `Manual test: POST /api/login with valid credentials returns JWT token`, `Manual test: Protected routes require valid JWT token`, `Manual test: Invalid/missing token returns 401/403`, `Manual test: RBAC - admin can create, regular user cannot`, `Manual test: RBAC - regular user can read, admin can write`
 
 ### feature-003 — Agent Heartbeat & Real-time Updates
 

@@ -38,7 +38,7 @@
     {
       "id": "feature-002",
       "title": "Authentication & Multi-org Support",
-      "status": "in_progress",
+      "status": "done",
       "acceptance": [
         "User authentication with JWT",
         "Organization model and multi-org data isolation",
@@ -46,13 +46,15 @@
         "Login/logout UI"
       ],
       "implementation": [
-        "server/src/index.ts - JWT auth middleware, login endpoint, protected routes",
+        "server/src/index.ts - JWT auth middleware, login endpoint, protected routes, RBAC authorization middleware",
         "prisma/schema.prisma - organization fields added to Agent and Task models"
       ],
       "tests": [
         "Manual test: POST /api/login with valid credentials returns JWT token",
         "Manual test: Protected routes require valid JWT token",
-        "Manual test: Invalid/missing token returns 401/403"
+        "Manual test: Invalid/missing token returns 401/403",
+        "Manual test: RBAC - admin can create, regular user cannot",
+        "Manual test: RBAC - regular user can read, admin can write"
       ]
     },
     {
