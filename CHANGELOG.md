@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.5.0 — work-in-progress checkpoint
+
+Partial code published for continued development. Known issues: STATUS.md.
+
+## 1.5.0 — Authentication & RBAC checkpoint
+
+### Added
+- Role-based access control (RBAC) middleware: `authorizeRoles(allowedRoles)` 
+- Two user roles: `admin` (can create agents/tasks) and `user` (can read only)
+- `role` claim included in JWT payload upon login
+- RBAC-protected routes: POST /api/agents, POST /api/tasks, PATCH /api/tasks/:id require admin role
+- Regular authenticated users can GET /api/agents and GET /api/tasks (org-filtered)
+- Updated in-memory user store with `role` field
+- Updated JWT signing to include `role` in payload
+
 ## 1.4.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.
